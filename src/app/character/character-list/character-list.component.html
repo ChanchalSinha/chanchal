@@ -1,0 +1,15 @@
+<div class="header">
+    <span> R&M </span>    
+    <input type="text" (input)="findCharacters($event)" placeholder="Character Name" />
+    <!-- <input type="text" [(ngModel)]="textValue" (ngmodelchange)="findCharacters()" placeholder="Character Name" /> -->
+  </div>
+<div class="characters-list" >
+    <ng-container *ngFor="let character of characters.characterResult">
+        <div>            
+            <img src={{character.image}} /><br>
+            <a [routerLink]="['/characters', character.id]">{{character.name}}</a>
+            <div>id: {{character.id}} - created {{character.id}} years ago</div>
+            <button (click)="viewEpisodes(character)">View Episodes</button>
+        </div>
+    </ng-container>
+</div>

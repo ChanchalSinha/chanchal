@@ -1,0 +1,20 @@
+.episode-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 5px;
+    background-color: black;
+    padding: 10px;
+}
+
+.episode-list > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    align-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.episode-list > div > img {
+    width: 200px;
+    height: 200px;
+}
