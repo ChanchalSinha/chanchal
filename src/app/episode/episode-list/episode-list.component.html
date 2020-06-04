@@ -1,9 +1,12 @@
-<div class="episode-list">
+<div class="episode-list" *ngIf="episodes && ((loading$ | async) === false)">
     <ng-container *ngFor="let episode of episodes">
         <div>
             <img src="../../../assets/episode.jpg">
             <div>{{episode.name}}</div>
             <div>{{episode.episode}} - {{episode.air_date}}</div>
         </div>
+    </ng-container>
+    <ng-container *ngIf="loading$ | async">
+        <img src="../../../assets/pickle_rick.gif" alt="loading...">
     </ng-container>
 </div>

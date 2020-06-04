@@ -1,0 +1,6 @@
+<div class="characters-card">            
+    <img src={{character.image}} /><br>
+    <a [routerLink]="['/characters', character.id]">{{character.name}}</a>
+    <div>id: {{character.id}} - created {{createdDate}}</div>
+    <button (click)="viewEpisodes(character)">View Episodes</button>
+</div>

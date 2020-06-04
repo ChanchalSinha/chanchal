@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterRoutingModule } from './character-routing.module';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CharacterCardComponent } from './character-card/character-card.component';
 
 @NgModule({
   declarations: [
     CharacterListComponent,
-    CharacterDetailsComponent
+    CharacterDetailsComponent,
+    CharacterCardComponent
   ],
   imports: [
     CommonModule,
     CharacterRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     CharacterRoutingModule
